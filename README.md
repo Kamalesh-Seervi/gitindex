@@ -2,7 +2,7 @@
 
 > **This repository = PageIndex (base engine) + GitIndex (new feature built on top).**
 >
-> [**PageIndex**](#-introduction-to-pageindex) — documented in full below — is the base code: it turns a **document** into a reasoning-friendly **tree** and lets an LLM agent navigate it, with **no vectors and no chunking**. **GitIndex** is a feature built on that *same* architecture, but pointed at **GitHub** instead of PDFs. It indexes **entire repositories (code), issues & PRs, and whole orgs (100+ repos)** into the same kind of tree, then lets an agent reason over it to answer questions.
+> [**PageIndex**](https://github.com/VectifyAI/PageIndex) — documented in full below — is the base code: it turns a **document** into a reasoning-friendly **tree** and lets an LLM agent navigate it, with **no vectors and no chunking**. **GitIndex** is a feature built on that *same* architecture, but pointed at **GitHub** instead of PDFs. It indexes **entire repositories (code), issues & PRs, and whole orgs (100+ repos)** into the same kind of tree, then lets an agent reason over it to answer questions.
 
 GitIndex reuses PageIndex's retrieval contract verbatim — a tree of `{title, node_id, summary, …}` nodes plus the agent tools `get_document`, `get_document_structure`, and `get_node_content`. Only the **tree-building** and **content-addressing** layers are GitHub-specific; the reasoning/retrieval layer is unchanged from PageIndex.
 
