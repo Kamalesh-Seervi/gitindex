@@ -1,0 +1,17 @@
+model: "github_copilot/claude-opus-4.8"  # the main model for all LLM calls; can be overridden for specific use cases below
+# model: "anthropic/claude-sonnet-4-6"
+retrieve_model: "github_copilot/claude-opus-4.8"  # defaults to `model` if not set
+toc_check_page_num: 20
+max_page_num_each_node: 10
+max_token_num_each_node: 20000
+if_add_node_id: "yes"
+if_add_node_summary: "yes"
+if_add_doc_description: "no"
+if_add_node_text: "no"
+
+# ── GitHub source settings (repos / issues / PRs / orgs) ──────────────────────
+summary_model: "github_copilot/claude-opus-4.8"                      # cheap LiteLLM model for GitHub summaries; defaults to `model`
+github_max_file_bytes: 200000          # skip blobs larger than this when indexing repos
+github_summarize_leaves: "extractive"  # "extractive" (cheap, no LLM) or "llm" (batched)
+github_summary_batch_size: 20          # leaves per batched LLM call when github_summarize_leaves == "llm"
+github_max_items: 300                  # max issues/PRs (per type) or repos (per org) to fetch

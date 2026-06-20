@@ -1,0 +1,11 @@
+litellm>=1.83,<1.84
+# openai-agents  # optional: required for examples/agentic_vectorless_rag_demo.py
+pymupdf==1.26.4
+PyPDF2==3.0.1
+python-dotenv==1.0.1
+pyyaml==6.0.2
+requests==2.32.3
+# Optional: enables symbol-level code splitting for non-Python languages.
+# Python files use the stdlib `ast` module and need no extra install.
+# tree-sitter==0.21.3
+# tree-sitter-languages==1.10.2
